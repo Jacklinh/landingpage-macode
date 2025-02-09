@@ -1,0 +1,410 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Aeonik";
+    src: url("/fonts/Aeonik-Air.otf") format("otf");
+    font-weight: 250;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Aeonik";
+    src: url("/fonts/Aeonik-Thin.otf") format("otf");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Aeonik";
+    src: url("/fonts/Aeonik-Light.otf") format("otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Aeonik";
+    src: url("/fonts/Aeonik-Regular.otf") format("otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Aeonik";
+    src: url("/fonts/Aeonik-Medium.otf") format("otf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Aeonik";
+    src: url("/fonts/Aeonik-Bold.otf") format("otf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --bgGrey: #f4f4f4;
+    --bgBlack: #010101;
+    --colorBlack: #000000;
+    --colorWhite: #ffffff;
+    --bgPagination: #cfcfcf;
+    --bgActive: #ddf247;
+    --bgLanguage: #e8e8e8;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    font-size: 100%;
+    font-family: "Source Code Pro", monospace;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.btnBlack a {
+    display: inline-block;
+    color: var(--colorWhite);
+    font-size: 137.5%;
+    font-family: "Aeonik", sans-serif;
+    font-weight: 500;
+    padding: 22px 72px 22px 28px;
+    position: relative;
+    background: var(--bgBlack) url(/images/icon/icon_arrow_up_right.png) right 30px center no-repeat;
+    border-radius: 2px;
+    min-width: 236px;
+    min-height: 75px;
+    transition: color 0.3s ease-in-out;
+}
+
+.btnWhite a {
+    display: block;
+    text-align: center;
+    color: var(--bgActive);
+    background-color: var(--colorWhite);
+    font-size: 137.5%;
+    font-family: "Aeonik", sans-serif;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 12px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.btnOpacity a {
+    display: block;
+    text-align: center;
+    color: var(--colorWhite);
+    background-color: rgba(1, 1, 1, 0.25);
+    font-size: 137.5%;
+    font-family: "Aeonik", sans-serif;
+    font-weight: 500;
+    border-radius: 2px;
+    padding: 22px 10px;
+    min-width: 236px;
+    min-height: 75px;
+    transition: color 0.3s ease-in-out;
+}
+
+.btnBlack a:hover {
+    color: var(--bgActive);
+}
+.btnWhite a:hover,
+.btnOpacity a:hover {
+    color: var(--colorBlack);
+}
+.boxHeading {
+    font-family: "Aeonik", sans-serif;
+}
+
+.boxHeading h2 {
+    font-size: 300%;
+    font-weight: bold;
+    color: var(--colorBlack);
+    line-height: 1.18;
+    margin-bottom: 50px;
+}
+
+.boxHeading .heading_desc {
+    font-size: 137.5%;
+    font-weight: 200;
+    color: var(--colorBlack);
+    line-height: 1.2;
+}
+
+.wrapHeader {
+    position: relative;
+}
+
+/* swiper code */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination {
+    position: absolute;
+    text-align: left !important;
+    bottom: 20px !important;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    width: 51px;
+    height: 11px;
+    background-color: var(--bgPagination);
+    border-radius: 0;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    width: 82px;
+    background-color: var(--bgActive);
+}
+
+.swiper-wrapper,
+.swiper {
+    position: static !important;
+}
+
+.swiper-slide .swiper-item {
+    background-color: var(--bgActive) !important;
+}
+
+/* featureBox */
+.featureBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 30px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
+    border-radius: 14px;
+    gap: 64px 0;
+    text-align: left;
+}
+
+.featureBox:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 14px;
+    border: 3px solid transparent;
+    transition: border 0.3s ease-in-out;
+}
+
+.featureBox:hover:after {
+    border-color: var(--bgActive);
+}
+
+.featureIcon {
+    display: inline-block;
+    background-color: var(--colorWhite);
+    width: 83px;
+    height: 83px;
+    border-radius: 10px;
+    padding: 21px 5px 0;
+}
+
+.featureIcon img {
+    margin: 0 auto;
+}
+
+.featureCnt h3 {
+    font-size: 212.5%;
+    font-family: "Aeonik", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    margin-bottom: 7px;
+}
+
+.featureCnt p {
+    letter-spacing: 0.1px;
+    font-family: var(--font-inter), sans-serif;
+}
+
+/* listRunning */
+.listRunning {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 96px;
+    padding-right: 254px;
+}
+
+.listRunning li {
+    width: 50%;
+    border-left: 1px solid #e4e4e4;
+    padding: 0 45px;
+}
+
+.listRunning li:first-child {
+    border-left: 0;
+    padding-left: 0;
+}
+
+.listRunning li:last-child {
+    padding-right: 0;
+    padding-left: 60px;
+}
+
+.listRunning .featureBox {
+    padding: 0;
+    gap: 60px 0;
+}
+
+.listRunning .featureBox:after {
+    content: none;
+}
+
+.listRunning .featureIcon {
+    padding: 0;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+}
+
+.listRunning .featureIcon img {
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+    .listRunning {
+        padding-right: 0;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .wrapper {
+        overflow: hidden;
+    }
+}
+
+/* Mobile (< 768px) */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 75%;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .btnBlack a {
+        font-size: 141.6%;
+        min-width: 177px;
+        min-height: 59px;
+        padding: 19px 54px 14px 21px;
+        background-position: right 16px center;
+        background-size: 40px auto;
+    }
+
+    .btnOpacity a {
+        font-size: 141.6%;
+        min-width: 177px;
+        min-height: 59px;
+        padding: 19px 10px 14px;
+    }
+
+    .boxHeading {
+        margin-bottom: 26px;
+    }
+
+    .boxHeading h2 {
+        font-size: 283.3%;
+        margin-bottom: 20px;
+    }
+
+    .boxHeading .heading_desc {
+        font-size: 133.3%;
+    }
+
+    .featureBox {
+        padding: 32px 17px;
+    }
+
+    .featureCnt h3 {
+        font-size: 283.3%;
+        margin-bottom: 7px;
+    }
+
+    .featureCnt p {
+        font-size: 133.3%;
+        letter-spacing: 0.1px;
+    }
+
+    .listRunning {
+        padding-right: 0;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .listRunning li {
+        width: 100%;
+        padding: 50px 0;
+        border-left: 0;
+        border-bottom: 1px solid #e4e4e4;
+        max-width: 65%;
+        margin: 0 auto;
+    }
+
+    .listRunning li:first-child {
+        padding-right: 0;
+    }
+
+    .listRunning li:last-child {
+        padding-left: 0;
+        border-bottom: 0;
+    }
+
+    .listRunning .featureBox {
+        text-align: center;
+    }
+
+    .listRunning .featureIcon {
+        margin: 0 auto;
+    }
+
+    .listRunning .featureBox {
+        gap: 40px;
+    }
+
+    .listRunning .featureCnt h3 {
+        margin-bottom: 24px;
+    }
+
+    .listRunning .featureCnt p {
+        font-family: var(--font-inter), sans-serif;
+    }
+
+    /* swiper core */
+    .swiper-pagination {
+        bottom: 0 !important;
+        text-align: center !important;
+    }
+}

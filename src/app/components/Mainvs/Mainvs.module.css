@@ -1,0 +1,157 @@
+.secMainvs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 905px;
+}
+.mainvsContent {
+    background-color: var(--bgGrey);
+    color: var(--colorBlack);
+    width: 51%;
+    padding: 172px 50px 20px;
+}
+.mainvsContent h1 {
+    font-size: 375%;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    line-height: 1.25;
+}
+.imgCode {
+    position: relative;
+    top: -3px;
+    right: -6px;
+    display: inline-block;
+}
+.lineDesc {
+    margin: 75px 0 -5px;
+}
+.btnMainvs {
+    margin-top: 109px;
+}
+.mainvsBanner {
+    background: var(--bgBlack) url(/images/main/bgLine.png) no-repeat right center;
+    color: var(--colorWhite);
+    flex: 1;
+    position: relative;
+}
+.mainvsBanner:after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    width: 267px;
+    height: 267px;
+    background: url(/images/icon/icon_park_caution2.png) no-repeat;
+    background-size: 100% auto;
+}
+.mainvsCode {
+    position: absolute;
+    top: 50%;
+    left: -31%;
+    transform: translateY(-50%);
+    margin-top: 143px;
+}
+.mainvsAvatar {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+}
+.mainvsName {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 414px;
+    min-height: 67px;
+    font-size: 125%;
+    font-family: 'Aeonik', sans-serif;
+    font-weight: 250;
+    color: var(--colorWhite);
+    background-color: rgba(1, 1, 1, 0.5);
+    display: flex;
+    align-items: center;
+    padding: 14px 14px 14px 64px;
+    gap: 0 14px;
+    backdrop-filter: blur(15px);
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+    .secMainvs {
+        min-height: auto;
+        flex-direction: column;
+    }
+    .mainvsContent {
+        width: 100%;
+    }
+    .mainvsBanner {
+        min-height: 680px;
+    }
+    .imgCode {
+        top: 0;
+        right: 5px;
+        width: 18px;
+    }
+    .mainvsCode {
+        left: -16px;
+        margin-top: 56px;
+        padding-right: 55px;
+    }
+}
+/* Mobile (< 768px) */
+@media screen and (max-width: 767px) {
+    .secMainvs {
+        min-height: auto;
+        flex-direction: column;
+    }
+    .mainvsContent {
+        width: 100%;
+        padding: 102px 15px 82px;
+    }
+    .mainvsContent h1 {
+        font-size: 283.3%;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+        line-height: 1.25;
+        font-family: 'Aeonik', sans-serif;
+    }
+    .imgCode {
+        top: 0;
+        right: 5px;
+        width: 18px;
+    }
+    .lineDesc {
+        width: 60px;
+        margin: 26px 0 5px;
+    }
+    .btnMainvs {
+        margin-top: 22px;
+    }
+    .mainvsBanner {
+        min-height: 480px;
+        background-size: 90% auto;
+    }
+    .mainvsName {
+        font-size: 88.3%;
+        width: 59%;
+        min-height: 26px;
+        padding: 10px 14px 10px 36px;
+        backdrop-filter: blur(8px);
+        gap: 0 4px;
+    }
+    .mainvsName img {
+        max-width: 16px;
+    }
+    .mainvsCode {
+        left: -16px;
+        margin-top: 56px;
+        padding-right: 55px;
+    }
+    .mainvsAvatar {
+        left: 20%;
+        max-width: 73%;
+    }
+    .mainvsBanner:after {
+        width: 140px;
+        height: 140px;
+        bottom: -60px;
+        left: 53%;
+    }
+}

@@ -1,0 +1,177 @@
+.secPricing {
+    padding: 120px 0 60px;
+}
+
+.pricingHeading h2 {
+    margin-bottom: 30px;
+}
+
+.pricingHeading p {
+    font-size: 137.5%;
+}
+
+.listPricing {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 35px;
+    padding: 74px 43px;
+    align-items: flex-end;
+}
+
+.listPricing>li {
+    width: calc((100% - 70px) / 3);
+}
+
+.boxPricing {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--bgGrey);
+    color: var(--colorBlack);
+    padding: 60px 45px 54px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Aeonik', sans-serif;
+    min-height: 100%;
+}
+
+.boxPricing .pricingName {
+    font-size: 150%;
+    text-transform: uppercase;
+    letter-spacing: 0.25px;
+}
+
+.boxPricing .price {
+    padding: 21px 0 48px;
+}
+
+.boxPricing .price sup {
+    font-size: 125%;
+    letter-spacing: 0.15px;
+}
+
+.boxPricing .price span {
+    font-size: 300%;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.boxPricing .pricingCheck {
+    list-style: none;
+    font-size: 137.5%;
+}
+
+.pricingNew .boxPricing {
+    background-color: var(--bgBlack);
+    color: var(--colorWhite);
+    min-height: 548px;
+}
+
+.pricingNew .pricingBtn a {
+    background-color: var(--bgActive);
+    color: var(--colorBlack);
+}
+
+.pricingNew .pricingBtn a:hover {
+    color: var(--colorWhite);
+}
+
+.pricingNew .price {
+    position: relative;
+}
+
+.pricingNew .price:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 42px;
+    height: 39px;
+    background: url(/images/icon/icon_new.png) no-repeat;
+    transform: translateY(-50%);
+}
+
+.pricingBtn {
+    margin-top: 74px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+    .listPricing {
+        padding: 60px 0;
+        gap: 0 15px;
+    }
+
+    .listPricing>li {
+        width: calc((100% - 30px) / 3);
+    }
+
+    .boxPricing,
+    .pricingNew .boxPricing {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .secPricing {
+        padding: 158px 0 0;
+    }
+
+    .pricingHeading h2 {
+        margin-bottom: 20px;
+    }
+
+    .pricingHeading p {
+        font-size: 133.3%;
+        max-width: 60%;
+        margin: 0 auto;
+        letter-spacing: 0.1px;
+    }
+
+    .listPricing {
+        flex-direction: column;
+        gap: 30px 0;
+        padding: 94px 0 0;
+        align-items: normal;
+    }
+
+    .listPricing>li {
+        width: 100%;
+    }
+
+    .boxPricing {
+        padding: 58px 42px 46px;
+        height: auto;
+    }
+
+    .boxPricing .pricingName {
+        font-size: 175%;
+        letter-spacing: 0.22px;
+    }
+
+    .boxPricing .price {
+        padding: 17px 0 42px;
+    }
+
+    .boxPricing .price sup {
+        font-size: 150%;
+        letter-spacing: 0.13px;
+    }
+
+    .boxPricing .price span {
+        font-size: 350%;
+        margin-left: 5px;
+    }
+
+    .boxPricing .pricingCheck {
+        font-size: 158.3%;
+    }
+
+    .pricingNew .boxPricing {
+        height: auto;
+    }
+
+    .pricingBtn {
+       margin-top: 63px;
+    }
+}

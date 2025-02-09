@@ -1,0 +1,109 @@
+.secFaq {
+    padding: 40px 0;
+}
+
+.faqHeading h2 {
+    margin-top: 0;
+}
+
+.faqAccItem {
+    border-bottom: 2px solid #e4e4e4;
+}
+
+.faqAccItem:last-child {
+    border-bottom: 0;
+}
+
+.faqAccTtitle {
+    position: relative;
+    font-size: 212.5%;
+    font-weight: bold;
+    padding: 68px 0 60px;
+    font-family: 'Aeonik', sans-serif;
+    letter-spacing: 0.25px;
+    cursor: pointer;
+}
+
+.faqAccTtitle button {
+    width: 100%;
+    padding-right: 80px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.faqAccTtitle:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 62px;
+    height: 62px;
+    background: var(--colorWhite) url(/images/icon/plus.png) no-repeat center center;
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+.faqAccItem.active .faqAccTtitle:after {
+    background: var(--bgActive) url(/images/icon/minus.png) no-repeat center center;
+    border-color: var(--bgActive);
+}
+
+.faqAccBody {
+    display: none;
+    max-width: 60%;
+    padding-bottom: 48px;
+    font-family: var(--font-inter), sans-serif;
+    letter-spacing: 0.1px;
+}
+
+.faqAccItem.active .faqAccBody {
+    display: block;
+}
+
+.faqAccItem.active .faqAccTtitle {
+    padding-bottom: 52px;
+}
+
+@media screen and (max-width: 767px) {
+    .secFaq {
+        padding: 14px 0;
+    }
+
+    .faqAccItem {
+        border-bottom-width: 1px;
+    }
+
+    .faqAccTtitle {
+        font-size: 175%;
+        padding: 14px 0;
+        line-height: 1.3;
+    }
+
+    .faqAccTtitle button {
+        padding-right: 45px;
+    }
+
+    .faqAccBody {
+        font-size: 158.3%;
+        font-weight: 300;
+        max-width: 100%;
+    }
+
+    .faqAccTtitle:after {
+        width: 32px;
+        height: 32px;
+        background-size: 13px auto;
+        border-width: 1px;
+    }
+
+    .faqAccItem.active .faqAccTtitle {
+        padding-bottom: 0;
+    }
+
+    .faqAccItem.active .faqAccTtitle:after {
+        background-size: 11px auto;
+    }
+}
